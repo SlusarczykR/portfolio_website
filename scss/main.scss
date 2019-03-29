@@ -1,0 +1,372 @@
+@import "_variables";
+@import "_utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6rem;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+#logo {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+// NAVBAR
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  .logo {
+    margin-right: 0.5rem;
+  }
+  ul {
+    display: flex;
+    li {
+      padding: 1rem 1.5rem;
+      a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        border-bottom: 3px transparent solid;
+        padding-bottom: 0.5rem;
+        transition: border-color 0.5s;
+        &:hover {
+          border-color: #fff;
+          cursor: pointer;
+        }
+        &.current {
+          border-color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+// HEADER
+#header {
+  &-home {
+    background: $bg-img no-repeat center center/cover fixed;
+    height: 100vh;
+    color: #fff;
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+      h1 {
+        font-size: 3rem;
+        line-height: 1.2rem;
+        margin-bottom: 2rem;
+        #name {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+// HOME SECTION
+#home {
+  .process {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    text-align: center;
+    // process icon
+    h3 {
+      margin-bottom: 1rem;
+    }
+    &-icon {
+      border-radius: 50%;
+      background: $dark-color;
+      color: #fff;
+      width: 70px;
+      height: 70px;
+      padding: 2rem;
+      line-height: 70px;
+      text-align: center;
+      transition: all 1s;
+      &:hover {
+        background: $main-color;
+        height: 90px;
+        width: 90px;
+        line-height: 90px;
+      }
+    }
+    #icon {
+      &-1:hover {
+        background: rgb(255, 223, 45);
+      }
+      &-2:hover {
+        background: rgb(201, 22, 218);
+      }
+      &-3:hover {
+        background: rgb(251, 19, 19);
+      }
+    }
+  }
+}
+
+#about {
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        "bioimage bio bio"
+        "tr1 tr2 tr3";
+      grid-gap: 1.2rem;
+    }
+    // Grid Area
+    .bio-image {
+      grid-area: bioimage;
+      align-self: center;
+    }
+    .bio {
+      grid-area: bio;
+      border-left: 3px solid $main-color;
+      padding: 0.8rem;
+      color: #fff;
+      p {
+        #galleryLink {
+          a {
+            color: $medium-color;
+            &:hover {
+              color: $dark-color;
+            }
+          }
+        }
+      }
+    }
+    .trait-1 {
+      grid-area: tr1;
+    }
+    .trait-2 {
+      grid-area: tr2;
+    }
+    .trait-3 {
+      grid-area: tr3;
+    }
+    .trait-1,
+    .trait-2,
+    .trait-3 {
+      .fas {
+        color: $main-color;
+        margin: 1rem;
+      }
+    }
+  }
+  &-b {
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.7rem;
+      div {
+        height: 100%;
+        color: #f4f4f4;
+        text-align: center;
+        background: $main-color;
+      }
+    }
+  }
+  &-c {
+    .section-title {
+      color: $dark-color;
+    }
+    .bottom-line {
+      margin-bottom: 3rem;
+    }
+    .code-logos,
+    .tools-logos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3rem;
+      align-items: center;
+      justify-items: center;
+      margin-bottom: 5rem;
+      img {
+        color: rgb(190, 190, 190);
+        height: 96px;
+        width: auto;
+      }
+    }
+  }
+}
+
+// WORK SECTION
+#work {
+  &-a {
+    .items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      padding: 1rem 0;
+      .item {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+        height: 100%;
+        width: 100%;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+        &:hover {
+          transform: scale(1.2);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// MODAL
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+  .modal-content {
+    position: relative;
+    background: #f4f4f4;
+    margin: 10% auto;
+    padding: 1.3rem;
+    width: 1600px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalOpen;
+    animation-duration: 1s;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    #closeBtn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.1rem;
+      color: #ccc;
+      float: right;
+      font-size: 30px;
+      &:hover,
+      &:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// MODAL ANIMATION
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// CONTACT SECTION
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "subject phone"
+        "message message";
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+      .name-input {
+        grid-area: name;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        height: 100px;
+        grid-area: message;
+      }
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+    }
+    .btn-dark {
+      width: 50%;
+    }
+  }
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+  }
+}
+
+// Footer
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+    .social {
+      .fab {
+        margin-right: 1rem;
+        border: 2px #fff solid;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        text-align: center;
+        padding: 0.5rem;
+        &:hover {
+          background: $main-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+@import "_media";

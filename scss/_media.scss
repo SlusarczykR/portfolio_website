@@ -1,0 +1,145 @@
+@media (max-width: 1300px) {
+  #about {
+    &-a {
+      .about-info {
+        img {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  #header-home {
+    .header-content {
+      h1 {
+        line-height: 2.5rem;
+        font-size: 2.5rem;
+      }
+      .lead {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  #work-a {
+    .items {
+      grid-template-columns: repeat(2, 1fr);
+      .item:last-child {
+        grid-column: 1 / span 2;
+      }
+    }
+  }
+  .modal {
+    .modal-content {
+      width: 1024px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #header-home {
+    height: 30rem;
+    .header-content {
+      padding-top: 5rem;
+      h1 {
+        font-size: 2rem;
+      }
+      .lead {
+        font-size: 1rem;
+      }
+    }
+  }
+  #about {
+    &-c {
+      .code-logos,
+      .tools-logos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    &-a {
+      .about-info {
+        grid-template-areas:
+          "bioimage"
+          "bio"
+          "tr1"
+          "tr2"
+          "tr3";
+      }
+    }
+  }
+  #work-a {
+    .items {
+      grid-template-columns: 1fr;
+      .item:last-child {
+        grid-column: 1;
+      }
+    }
+  }
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          "name"
+          "email"
+          "subject"
+          "phone"
+          "message";
+      }
+    }
+    &-b {
+      .contact-info {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+    .logo {
+      color: $main-color;
+      margin-bottom: 1rem;
+    }
+    ul {
+      li {
+        padding: 0.7rem;
+      }
+    }
+  }
+  #header {
+    &-home {
+      height: 10rem;
+      border-bottom: 3px solid $main-color;
+      .header-content {
+        display: none;
+      }
+    }
+  }
+  #home {
+    .process {
+      grid-template-columns: 1fr;
+    }
+  }
+  #about {
+    &-c {
+      .code-logos,
+      .tools-logos {
+        img {
+          height: 64px;
+        }
+      }
+    }
+  }
+  #main-footer {
+    height: 7rem;
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem;
+    }
+  }
+}
