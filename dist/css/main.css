@@ -398,6 +398,14 @@ img {
     grid-template-columns: 1fr;
     grid-gap: 2rem; } }
 
+@media (max-width: 600px) {
+  #main-footer {
+    height: 7rem; }
+    #main-footer .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem; } }
+
 @media (max-width: 500px) {
   #main-nav {
     flex-direction: column;
@@ -409,6 +417,7 @@ img {
       padding: 0.7rem; }
   #header-home {
     height: 10rem;
+    background: url("../img/portfolio-theme-3.jpg") no-repeat bottom left fixed;
     border-bottom: 3px solid #0072bb; }
     #header-home .header-content {
       display: none; }
@@ -416,10 +425,4 @@ img {
     grid-template-columns: 1fr; }
   #about-c .code-logos img,
   #about-c .tools-logos img {
-    height: 64px; }
-  #main-footer {
-    height: 7rem; }
-    #main-footer .footer-content {
-      flex-direction: column;
-      padding: 1rem;
-      height: 5rem; } }
+    height: 64px; } }
