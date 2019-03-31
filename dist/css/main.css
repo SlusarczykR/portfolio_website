@@ -13,7 +13,7 @@
 
 .btn-main {
   color: #333;
-  background-color: #4876ff; }
+  background-color: #0072bb; }
 
 .btn-light {
   color: #333;
@@ -26,11 +26,11 @@
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
-  background-color: #4876ff;
+  background-color: #0072bb;
   color: #fff; }
 
 .bg-main {
-  background: #4876ff;
+  background: #0072bb;
   color: #f4f4f4; }
 
 .bg-dark {
@@ -87,7 +87,7 @@ input[class^="btn-"]:hover {
 .bottom-line {
   height: 2px;
   width: 3rem;
-  background: #4876ff;
+  background: #0072bb;
   margin: 0.5rem auto 1rem auto; }
 
 * {
@@ -140,7 +140,7 @@ img {
           border-color: #fff;
           cursor: pointer; }
         #main-nav ul li a.current {
-          border-color: #4876ff; }
+          border-color: #0072bb; }
 
 #header-home {
   background: url("../img/portfolio-theme-3.jpg") no-repeat center center/cover fixed;
@@ -154,7 +154,7 @@ img {
       line-height: 1.2rem;
       margin-bottom: 2rem; }
       #header-home .header-content h1 #name {
-        color: #4876ff; }
+        color: #ff4c3b; }
 
 #home .process {
   display: grid;
@@ -174,7 +174,7 @@ img {
     text-align: center;
     transition: all 1s; }
     #home .process-icon:hover {
-      background: #4876ff;
+      background: #0072bb;
       height: 90px;
       width: 90px;
       line-height: 90px; }
@@ -196,7 +196,7 @@ img {
 
 #about-a .bio {
   grid-area: bio;
-  border-left: 3px solid #4876ff;
+  border-left: 3px solid #0072bb;
   padding: 0.8rem;
   color: #fff; }
   #about-a .bio p #galleryLink a {
@@ -216,7 +216,7 @@ img {
 #about-a .trait-1 .fas,
 #about-a .trait-2 .fas,
 #about-a .trait-3 .fas {
-  color: #4876ff;
+  color: #0072bb;
   margin: 1rem; }
 
 #about-b .progress {
@@ -229,7 +229,7 @@ img {
     height: 100%;
     color: #f4f4f4;
     text-align: center;
-    background: #4876ff; }
+    background: #0072bb; }
 
 #about-c .section-title {
   color: #333; }
@@ -329,6 +329,8 @@ img {
 
 #contact-a .btn-dark {
   width: 50%; }
+  #contact-a .btn-dark:hover {
+    background: #ff4c3b; }
 
 #contact-b .contact-info {
   display: grid;
@@ -354,7 +356,7 @@ img {
       text-align: center;
       padding: 0.5rem; }
       #main-footer .footer-content .social .fab:hover {
-        background: #4876ff;
+        background: #0072bb;
         cursor: pointer; }
 
 @media (max-width: 1300px) {
@@ -369,8 +371,6 @@ img {
     font-size: 1.3rem; }
   #work-a .items {
     grid-template-columns: repeat(2, 1fr); }
-    #work-a .items .item:last-child {
-      grid-column: 1 / span 2; }
   .modal .modal-content {
     width: 1024px; } }
 
@@ -403,13 +403,13 @@ img {
     flex-direction: column;
     align-items: center; }
     #main-nav .logo {
-      color: #4876ff;
+      color: #ff4c3b;
       margin-bottom: 1rem; }
     #main-nav ul li {
       padding: 0.7rem; }
   #header-home {
     height: 10rem;
-    border-bottom: 3px solid #4876ff; }
+    border-bottom: 3px solid #0072bb; }
     #header-home .header-content {
       display: none; }
   #home .process {

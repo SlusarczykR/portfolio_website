@@ -25,9 +25,6 @@
   #work-a {
     .items {
       grid-template-columns: repeat(2, 1fr);
-      .item:last-child {
-        grid-column: 1 / span 2;
-      }
     }
   }
   .modal {
@@ -101,7 +98,7 @@
     flex-direction: column;
     align-items: center;
     .logo {
-      color: $main-color;
+      color: $orange-red;
       margin-bottom: 1rem;
     }
     ul {

@@ -82,7 +82,7 @@ img {
         line-height: 1.2rem;
         margin-bottom: 2rem;
         #name {
-          color: $main-color;
+          color: $orange-red;
         }
       }
     }
@@ -328,6 +328,9 @@ img {
     }
     .btn-dark {
       width: 50%;
+      &:hover {
+        background: $orange-red;
+      }
     }
   }
   &-b {
