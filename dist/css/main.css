@@ -143,7 +143,7 @@ img {
           border-color: #0072bb; }
 
 #header-home {
-  background: url("../img/main-theme.jpg") no-repeat center center fixed/cover;
+  background: url("../img/main-theme.jpg") no-repeat center center/cover fixed;
   height: 100vh;
   color: #fff; }
   #header-home .header-content {
