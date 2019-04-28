@@ -71,7 +71,7 @@ img {
 // HEADER
 #header {
   &-home {
-    background: $bg-img no-repeat center center/cover fixed;
+    background: $bg-img no-repeat center center fixed / cover;
     height: 100vh;
     color: #fff;
     .header-content {
